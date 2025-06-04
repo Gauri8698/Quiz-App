@@ -1,0 +1,27 @@
+<div class="bg" style="background-color: #F8F8F8;">
+    <div class="parent">
+        <div class="child">
+            <div nz-row class="imgDiv">
+                <h1 style="margin-left: 80px;">Log In</h1>
+            </div>
+
+            <form nz-form [formGroup]="validateForm" class="login-form" (ngSubmit)="submitForm()" >
+                <nz-form-item>
+                    <nz-form-control nzErrorTip="Please Enter your email!">
+                        <input nz-input type="text" placeholder="E-mail"formControlName="email" />
+                    </nz-form-control>
+                </nz-form-item>
+
+                <nz-form-item>
+                    <nz-form-control nzErrorTip="Please Enter Your password!">
+                        <input nz-input placeholder="Password" type="password" formControlName="password" />
+                    </nz-form-control>
+                </nz-form-item>
+
+                <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'">LogIn</button>
+                Or <a routerLink="/register">Register Now!</a>
+            </form>
+        </div>
+    </div>
+</div>
+
